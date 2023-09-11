@@ -57,12 +57,13 @@ h3{
 }
 .parent{
     display: grid;
-    grid-template-columns: 0.5fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr ;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows:repeat(2, 1fr) ;
     row-gap: 2rem;
     text-align: left;
     width: 50%;
     margin: 30px auto 0 auto;
+     
 }
 .typing{
     padding-top: 50px;
@@ -82,5 +83,15 @@ p{
 }
 .bottom-container{
     background-color: #c1d8e6;
+    
+}
+
+@media  (max-width: 720px) {
+    .parent{
+        grid-template-columns: auto;
+    }
+    @media (min-width: 240px;) {
+        grid-template-columns: 1;
+    }
     
 }
